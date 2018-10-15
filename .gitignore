@@ -1,0 +1,10 @@
+.settings
+.vscode
+bin
+env
+lib
+src
+.classpath
+.project
+__pycache__
+.DS_Store
