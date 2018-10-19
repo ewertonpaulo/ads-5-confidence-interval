@@ -1,0 +1,1 @@
+java -cp bin MedidorDeOrdenacao counting 1400000 1400000 > 1a/counting/counting_teste_2.txt
