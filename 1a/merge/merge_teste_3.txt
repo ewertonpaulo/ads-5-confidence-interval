@@ -1,2 +1,2 @@
 Algoritmo TamanhoDaEntrada ValorMaximo TempoDeOrdenacao
-merge 1400000 1400000 353
+merge 1400000 1400000 329

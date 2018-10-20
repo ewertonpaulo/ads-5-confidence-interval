@@ -1,1 +1,1 @@
-java -cp bin MedidorDeOrdenacao counting 1400000 1400000 > 1a/counting/counting_teste_5.txt
+java -cp bin MedidorDeOrdenacao merge 1400000 1400000 > 1b/merge/merge_teste_277.txt
