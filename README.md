@@ -13,7 +13,7 @@
 Apesar do counting não ter o melhor intervalo de confiânca, ele se mostra bem homogênio sendo um bom algoritimo para esta e várias situações.
 ## Questão 2:
 ### letra A)
-Gráficos com relação x para o tamanho da entrada e y para o tempo de ordenação para Quick, Merge e Counting respectivamente:
+Gráficos com relação 'x' para o tamanho da entrada em um intervalo de 14000000 até 40000000 e 'y' para o tempo de ordenação para Quick, Merge e Counting respectivamente:
 ### Quick
 ![Image of Yaktocat](https://github.com/ewertonpaulo/ads-5-confidence-interval/blob/master/img/2a_quick.png)
 ### Merge
@@ -22,7 +22,7 @@ Gráficos com relação x para o tamanho da entrada e y para o tempo de ordenaç
 ![Image of Yaktocat](https://github.com/ewertonpaulo/ads-5-confidence-interval/blob/master/img/2a_counting.png)
 
 ### letra B)
-Gráficos com relação x para o valor máximo e y para o tempo de ordenação para Quick, Merge e Counting respectivamente:
+Gráficos com relação 'x' para o valor máximo em um intervalo de 14000000 até 40000000 e 'y' para o tempo de ordenação para Quick, Merge e Counting respectivamente:
 ### Quick
 ![Image of Yaktocat](https://github.com/ewertonpaulo/ads-5-confidence-interval/blob/master/img/2b_quick.png)
 ### Merge
