@@ -46,7 +46,7 @@ def segundo_b(tamanho, algoritmo):
         stdout, stderr = p.communicate()
 
 for i in ['counting']:
-#     varia_tam_amostra(5,i)
-#     letra_b(277,i)
+    varia_tam_amostra(5,i)
+    letra_b(277,i)
     segundo_a(40000000,i)
     segundo_b(40000000,i)

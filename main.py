@@ -8,29 +8,6 @@ import scipy.stats
 import os
 from IPython.display import Image
 
-dados = []
-dic = {}
-
-hl = handler()
-data_quick_1a = hl.dados_arquivos('1a/quick')
-data_couting_1a = hl.dados_arquivos('1a/counting')
-data_merge_1a = hl.dados_arquivos('1a/merge')
-
-
-titulos = ['algoritmo', 'TamanhoDaEntrada', 'ValorMaximo', 'TempoDeOrdenacao']
-
-quick_1a = hl.dictonary(titulos, data_quick_1a)
-counting_1a = hl.dictonary(titulos, data_couting_1a)
-merge_1a = hl.dictonary(titulos, data_merge_1a)
-
-mean_quick = statistics.mean(quick_1a['TempoDeOrdenacao'])
-mean_counting = statistics.mean(quick_1a['TempoDeOrdenacao'])
-mean_merge = statistics.mean(quick_1a['TempoDeOrdenacao'])
-
-desvio_padrao_quick = np.std(quick_1a['TempoDeOrdenacao'])
-desvio_padrao_merge = np.std(merge_1a['TempoDeOrdenacao'])
-desvio_padrao_counting = np.std(counting_1a['TempoDeOrdenacao'])
-
 def primeiro_a():
     hl = handler()
     for i in ['quick','counting','merge']:
@@ -59,13 +36,32 @@ def primeiro_b():
         print('Intervalo inferior ==> %s' %inter[0])
         print('Intervalo superior ==> %s' %inter[1])
         input()
-       
+
+def segundo_a():
+    hl = handler()
+    for i in ['quick','counting','merge']:
+        data = hl.dados_arquivos('2a/'+i)
+        titulos = ['algoritmo', 'TamanhoDaEntrada', 'ValorMaximo', 'TempoDeOrdenacao']
+        dic = hl.dictonary(titulos, data)
+        plt.plot(dic['TamanhoDaEntrada'], dic['TempoDeOrdenacao'])
+        plt.show()
+
+def segundo_b():
+    hl = handler()
+    for i in ['quick','counting','merge']:
+        data = hl.dados_arquivos('2b/'+i)
+        titulos = ['algoritmo', 'TamanhoDaEntrada', 'ValorMaximo', 'TempoDeOrdenacao']
+        dic = hl.dictonary(titulos, data)
+        plt.plot(dic['ValorMaximo'], dic['TempoDeOrdenacao'])
+        plt.show()
 
 def minimo(desvio,media):
     return ((100* 1.96*desvio)/(1*media))**2
 
 primeiro_a()
-
+primeiro_b()
+segundo_a()
+segundo_b()
 
 
 
