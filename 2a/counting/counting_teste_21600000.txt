@@ -1,0 +1,2 @@
+Algoritmo TamanhoDaEntrada ValorMaximo TempoDeOrdenacao
+counting 21600000 1400000 1597

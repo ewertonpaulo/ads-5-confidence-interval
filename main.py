@@ -33,17 +33,33 @@ desvio_padrao_counting = np.std(counting_1a['TempoDeOrdenacao'])
 
 def primeiro_a():
     hl = handler()
-    for i in ['1a/quick','1a/counting','1a/merge']:
-        data = hl.dados_arquivos(i)
+    for i in ['quick','counting','merge']:
+        data = hl.dados_arquivos('1a/'+i)
         titulos = ['algoritmo', 'TamanhoDaEntrada', 'ValorMaximo', 'TempoDeOrdenacao']
-
         dic = hl.dictonary(titulos, data)
-
         media = statistics.mean(dic['TempoDeOrdenacao'])
         desvio = statistics.pstdev(dic['TempoDeOrdenacao'])
-
         min = minimo(desvio,media)
-        print(min)
+        print(i +' ==> %s' %min)
+        input()
+    os.system('cls')
+
+def primeiro_b():
+    hl = handler()
+    for i in ['quick','counting','merge']:
+        data = hl.dados_arquivos('1b/'+i)
+        titulos = ['algoritmo', 'TamanhoDaEntrada', 'ValorMaximo', 'TempoDeOrdenacao']
+        dic = hl.dictonary(titulos, data)
+        media = statistics.mean(dic['TempoDeOrdenacao'])
+        desvio = statistics.pstdev(dic['TempoDeOrdenacao'])
+        inter = scipy.stats.norm.interval(0.95, loc=media, scale=desvio)
+        intervalo_1b = (inter[1]-inter[0])/2
+        print(i +' media ==> %s' %media)
+        print('Intervalo de Confianca ==> %s' %intervalo_1b)
+        print('Intervalo inferior ==> %s' %inter[0])
+        print('Intervalo superior ==> %s' %inter[1])
+        input()
+       
 
 def minimo(desvio,media):
     return ((100* 1.96*desvio)/(1*media))**2
